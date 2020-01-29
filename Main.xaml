@@ -111,9 +111,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="484,984" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="484,1140" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="438,528" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <TryCatch DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="438,684" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -121,7 +121,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="376,435" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,6 +140,18 @@
                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Key="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="VV processu" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" KeyModifiers="None">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
